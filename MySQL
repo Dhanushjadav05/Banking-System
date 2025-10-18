@@ -1,0 +1,25 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS banking_system;
+
+-- Use the database
+USE banking_system;
+
+-- Table to store account details
+CREATE TABLE IF NOT EXISTS account (
+    Acc_no INT PRIMARY KEY,
+    Name VARCHAR(50),
+    DOB DATE,
+    Address VARCHAR(100),
+    Mobile_no BIGINT,
+    Balance INT
+);
+
+-- Table to store account balance (amount)
+CREATE TABLE IF NOT EXISTS amount (
+    Acc_no INT PRIMARY KEY,
+    Name VARCHAR(50),
+    TotalBalance INT,
+    FOREIGN KEY (Acc_no) REFERENCES account(Acc_no)
+);
+#Before running the Python code, make sure to run the provided SQL queries in MySQL Workbench to create the database and tables, 
+so the system can store and update account data correctly 
