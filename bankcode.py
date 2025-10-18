@@ -1,4 +1,5 @@
 import mysql.connector 
+#change password user accordingly 
 con=mysql.connector.connect(host="localhost",user="root",password="root123",database="banking_system")
 def openacount():
     print("*************OPEN NEW ACCOUNT*************")
@@ -102,4 +103,5 @@ while True:
         print("\n......Thank You For Choosing Our Bank Services........\n")
         break
     else:
+
         print("........Invalid Choice........")
